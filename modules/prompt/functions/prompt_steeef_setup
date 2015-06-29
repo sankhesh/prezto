@@ -44,19 +44,19 @@ function prompt_steeef_setup {
   # Use extended color pallete if available.
   if [[ $TERM = *256color* || $TERM = *rxvt* ]]; then
     _prompt_steeef_colors=(
-      "%F{81}"  # Turquoise
-      "%F{166}" # Orange
-      "%F{135}" # Purple
-      "%F{161}" # Hotpink
-      "%F{118}" # Limegreen
+      "%F{81}%{$terminfo[bold]%}"  # Turquoise
+      "%F{166}%{$terminfo[bold]%}" # Orange
+      "%F{135}%{$terminfo[bold]%}" # Purple
+      "%F{161}%{$terminfo[bold]%}" # Hotpink
+      "%F{118}%{$terminfo[bold]%}" # Limegreen
     )
   else
     _prompt_steeef_colors=(
-      "%F{cyan}"
-      "%F{yellow}"
-      "%F{magenta}"
-      "%F{red}"
-      "%F{green}"
+      "%F{cyan}%{$terminfo[bold]%}"
+      "%F{yellow}%{$terminfo[bold]%}"
+      "%F{magenta}%{$terminfo[bold]%}"
+      "%F{red}%{$terminfo[bold]%}"
+      "%F{green}%{$terminfo[bold]%}"
     )
   fi
 
